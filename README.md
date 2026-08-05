@@ -13,13 +13,22 @@ https://github.com/tradplus/TradPlusAdSDK-SPM.git
 Or add it to `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/tradplus/TradPlusAdSDK-SPM.git", exact: "15.7.0")
+.package(url: "https://github.com/tradplus/TradPlusAdSDK-SPM.git", exact: "15.12.0")
 ```
+
+Recommended dependency rule in Xcode: **Up to Next Major Version** from `15.12.0`.
 
 ## Contents
 
-This package contains the `TradPlusAds` main SDK and depends on `TPExchange`.
-Adapter packages are not supported by Swift Package Manager yet.
+This package contains the `TradPlusAds` main SDK and depends on `TPExchange` (`13.8.70`).
 
-If Objective-C categories are not loaded correctly, add `-ObjC` to the app
-target's `Other Linker Flags`.
+Adapter packages are distributed in separate repositories, for example:
+
+```text
+https://github.com/tradplus/TradPlusAdSDK-SPM-AdMob.git
+```
+
+## Notes
+
+- If Objective-C categories are not loaded correctly, add `-ObjC` to the app target's `Other Linker Flags`.
+- Release `15.12.0` binary asset: `TradPlusAds-15.12.0.xcframework.zip`
