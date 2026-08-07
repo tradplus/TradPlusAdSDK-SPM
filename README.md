@@ -28,6 +28,18 @@ Adapter packages are distributed in separate repositories, for example:
 https://github.com/tradplus/TradPlusAdSDK-SPM-AdMob.git
 ```
 
+## Demo
+
+A runnable SPM sample project is available at:
+
+```text
+https://github.com/tradplus/TradPlusAdSDK-SPM-Demo.git
+```
+
+Clone the repo, open `TradPlusDemo.xcodeproj`, and build. No CocoaPods required.
+
+For CocoaPods integration, see [tradplus-ios-demo](https://github.com/tradplus/tradplus-ios-demo).
+
 ## Notes
 
 - If Objective-C categories are not loaded correctly, add `-ObjC` to the app target's `Other Linker Flags`.
