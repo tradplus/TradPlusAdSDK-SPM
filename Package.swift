@@ -24,6 +24,7 @@ let package = Package(
             name: "TradPlusAdSDK",
             dependencies: [
                 .target(name: "TradPlusAds"),
+                .target(name: "TPCrossAdapter"),
                 .product(name: "TPExchange", package: "pod_TPExchange_sdk"),
             ],
             path: ".",
@@ -47,6 +48,11 @@ let package = Package(
             name: "TradPlusAds",
             url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.12.0/TradPlusAds-15.12.0.xcframework.zip",
             checksum: "65dbe44c513bb6d2d531ab14f76e3fd7d01db229dad8ab79208344e0cb801d5e"
+        ),
+        .binaryTarget(
+            name: "TPCrossAdapter",
+            url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.12.0/TPCrossAdapter-15.12.0.xcframework.zip",
+            checksum: "b13b2590d03c909c8e6bc4cf7cdfa489dbf7cc8477d2feaaeefb1397f4a32cdd"
         ),
     ]
 )
