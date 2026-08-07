@@ -26,6 +26,7 @@ Adapter packages are distributed in separate repositories, for example:
 
 ```text
 https://github.com/tradplus/TradPlusAdSDK-SPM-AdMob.git
+https://github.com/tradplus/TradPlusAdSDK-SPM-TPCross.git
 ```
 
 ## Demo
