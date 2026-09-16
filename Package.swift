@@ -46,13 +46,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "TradPlusAds",
-            url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.14.0/TradPlusAds-15.14.0.xcframework.zip",
-            checksum: "fb6afe81d676f7f836dedccf8805b40cb3985198a4a2e330f2921f62605ce505"
+            url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.15.0/TradPlusAds-15.15.0.xcframework.zip",
+            checksum: "4d9dffd73076fc2dd2927084ac380e5031588f208628971571fbbdba85574d45"
         ),
         .binaryTarget(
             name: "TPCrossAdapter",
-            url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.14.0/TPCrossAdapter-15.14.0.xcframework.zip",
-            checksum: "5ebc1a4e32db26bb7d252e4960e4ed41d6e7679ddd6e32ec22471801a41431f8"
+            url: "https://github.com/tradplus/TradPlusAdSDK-SPM/releases/download/15.15.0/TPCrossAdapter-15.15.0.xcframework.zip",
+            checksum: "5fafa3186a9a715e09c746df88b8a11d4f4d7032634be7b737c3cda8e3fe8015"
         ),
     ]
 )
