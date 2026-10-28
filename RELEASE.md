@@ -1,66 +1,28 @@
-# TradPlusAdSDK-SPM 15.12.0 发布步骤
+# TradPlusAdSDK-SPM 15.17.0
 
-## 主包
+## Release Contents
 
-1. 确认 `releases/TradPlusAds-15.12.0.xcframework.zip` 已生成。
-2. 提交并推送 `TradPlusAdSDK-SPM` 仓库。
-3. 打 tag 并创建 Release：
+- `TradPlusAds-15.17.0.xcframework.zip`
+- `TPCrossAdapter-15.17.0.xcframework.zip`
+- TPExchange dependency: `13.8.80`
 
-```bash
-cd /Users/xuejun/Documents/GitHub/TradPlusAdSDK-SPM
-git add Package.swift README.md Sources TradPlusAdSDK LICENSE
-git commit -m "Support Swift Package Manager 15.12.0"
-git tag 15.12.0
-git push origin main
-git push origin 15.12.0
-gh release create 15.12.0 \
-  --repo tradplus/TradPlusAdSDK-SPM \
-  --title "15.12.0" \
-  --notes "TradPlusAdSDK 15.12.0 Swift Package Manager release." \
-  releases/TradPlusAds-15.12.0.xcframework.zip
-```
+The XCFramework contents match the published CocoaPods 15.17.0 package.
+TPCrossAdapter is included in this main package; its separate legacy repository
+is not a release target.
 
-4. 验证：
+## Publication
 
-```bash
-rm -rf .build
-swift package resolve
-```
+1. Validate each ZIP against the checksum in `Package.swift`.
+2. Commit and push the package sources and resources.
+3. Create tag and GitHub Release `15.17.0` at the committed revision and upload
+   both ZIP files from `releases/`.
+4. Publish the matching `15.17.0` adapter packages.
+5. Resolve and build `TradPlusAdSDK-SPM-Demo` against the published packages.
 
-## Adapter（每个仓库重复）
+ZIP files are GitHub Release assets and must not be committed to Git.
 
-以 AdMob 为例：
+## Integration
 
-```bash
-cd /Users/xuejun/Documents/GitHub/TradPlusAdSDK-SPM-AdMob
-git init
-git add Package.swift README.md LICENSE Sources
-git commit -m "Support Swift Package Manager 15.12.0"
-git remote add origin https://github.com/tradplus/TradPlusAdSDK-SPM-AdMob.git
-git branch -M main
-git tag 15.12.0
-git push -u origin main
-git push origin 15.12.0
-gh release create 15.12.0 \
-  --repo tradplus/TradPlusAdSDK-SPM-AdMob \
-  --title "15.12.0" \
-  --notes "TradPlus AdMob Adapter 15.12.0 SPM release." \
-  releases/TPAdMobAdapter-15.12.0.xcframework.zip
-```
-
-## 重新生成 Adapter 仓库
-
-在源码仓 `tradplus_dev_ios` 执行：
-
-```bash
-cd /Users/xuejun/tradplus_dev_ios
-./composeSpm.sh 15.12.0
-# 或仅 Adapter：
-./scripts/spm/generate-spm-adapters.sh 15.12.0
-```
-
-## 注意事项
-
-- `releases/*.zip` 仅用于上传 GitHub Release，不建议提交到 git。
-- 主包 SPM 依赖 `TPExchange 13.8.70`；CocoaPods 主包当前仍为 `13.8.60`，如需一致请同步 podspec。
-- HyBid Adapter 依赖 [vervegroup/hybid-ios-spm-sdk](https://github.com/vervegroup/hybid-ios-spm-sdk) `3.8.0`（Verve / HyBid 为同一平台）。
+Use the exact version `15.17.0` for the main package and adapter packages.
+The main SDK supports iOS 12; individual third-party packages may require a
+higher deployment target.

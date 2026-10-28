@@ -13,10 +13,10 @@ https://github.com/tradplus/TradPlusAdSDK-SPM.git
 Or add it to `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/tradplus/TradPlusAdSDK-SPM.git", exact: "15.12.0")
+.package(url: "https://github.com/tradplus/TradPlusAdSDK-SPM.git", exact: "15.17.0")
 ```
 
-Recommended dependency rule in Xcode: **Up to Next Major Version** from `15.12.0`.
+Recommended dependency rule in Xcode: **Exact Version** `15.17.0`.
 
 ## Contents
 
@@ -24,7 +24,7 @@ This package contains:
 
 - `TradPlusAds` main SDK
 - `TPCrossAdapter` (TP Cross, bundled by default)
-- `TPExchange` dependency (`13.8.70`)
+- `TPExchange` dependency (`13.8.80`)
 
 Third-party adapter packages are distributed in separate repositories, for example:
 
@@ -47,6 +47,6 @@ For CocoaPods integration, see [tradplus-ios-demo](https://github.com/tradplus/t
 ## Notes
 
 - If Objective-C categories are not loaded correctly, add `-ObjC` to the app target's `Other Linker Flags`.
-- Release `15.12.0` binary assets:
-  - `TradPlusAds-15.12.0.xcframework.zip`
-  - `TPCrossAdapter-15.12.0.xcframework.zip`
+- Release `15.17.0` binary assets:
+  - `TradPlusAds-15.17.0.xcframework.zip`
+  - `TPCrossAdapter-15.17.0.xcframework.zip`
